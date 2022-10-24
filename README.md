@@ -1,7 +1,8 @@
 # Live Code
 
 This is one of my first project, I did it for FreeCodeCamp and now it's on my Github account.
-Check it out here:
+
+Check it out here: [Live Aplication](https://rvjonh-quote-random.netlify.app/)
 
 ## Development
 
