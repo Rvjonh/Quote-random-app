@@ -1,0 +1,126 @@
+$first-color: rgb(46, 195, 255);
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 22px;
+    width: 100%;
+    height: 100%;
+}
+
+.block-frame{
+    background-color: $first-color;
+    transition: background 1s 0s ease;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+     
+}
+
+#quote-box{
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    min-width: 400px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgb(255, 255, 255);
+
+    #text{
+        display: block;
+        margin: 2em;
+    }
+    #author{
+        text-align: right;
+        margin-right: 1em;
+        font-weight: bolder;
+    }
+
+    .buttons{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 0.5em 0.7em;
+
+        .button-share{
+            background-color: $first-color;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 0.2em;
+            transition: all 0.25s ease;
+
+            img{
+                width: 2em;
+                height: 2em;
+                object-fit: contain;
+            }
+        }
+        .button-share + .button-share{
+            margin-left: 0.5em;
+        }
+        .button-new-quote{
+            cursor: pointer;
+            margin-left: auto;
+            font-size: 1.5rem;
+            outline: none;
+            border-radius: 0.2em;
+            padding: 0 0.5em;
+            position: relative;
+            z-index: 3;
+            overflow: hidden;
+            transition: all 0.25s ease;
+        }
+
+        .button-new-quote .back-quote{
+            content: " ";
+            z-index: -1;
+            background-color: $first-color;
+            width: 2em;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            transform: skew(-10deg);
+            transition: all 1s ease;
+        }
+        .back-quote-init{
+            left: -40%;
+        }
+        .back-quote-waiting{
+            left: calc(50% - 2em/2);
+        }
+        .back-quote-requested{
+            animation: move-right 1s ease forwards;
+        }
+        @keyframes move-right {
+            from{
+                left: calc(50% - 2em/2);
+            }
+            50%{
+                left: 105%;
+            }
+            51%{
+                left: -40%;
+            }
+            100%{
+                left: calc(50% - 2em/2);
+            }
+        }
+    }
+
+}
+
+.contact{
+    margin-top: .5em;
+    color: black;
+    text-decoration: none;
+}
+.contact:visited{
+    color: black;
+}

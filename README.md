@@ -1,6 +1,16 @@
-# Getting Started with Create React App
+# Live Code
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is one of my first project, I did it for FreeCodeCamp and now it's on my Github account.
+Check it out here:
+
+## Development
+
+You can use the code for whatever you want 😎.
+I used CRA and SASS just install de dependencies and insert your changes 😀.
+
+### Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). DO NOT FORGET TO RUN COMAND 'npm i' for the dependencies
 
 ## Available Scripts
 
